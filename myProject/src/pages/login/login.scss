@@ -1,0 +1,44 @@
+page-login{*{
+    padding:0;
+    margin:0;
+}
+#myinput>ion-item{
+  border:0;
+  border-bottom:1px solid #ddd;
+}
+
+.checked{
+    width:10px;
+    height:10px;
+background:#E5004A;
+}
+.rember>ion-col>button{
+font-size:12px;
+color:#666;
+}
+.rember>ion-col:nth-child(2)>button:last-child{
+    color:#488AFF;
+}
+.btn{
+    width:100%;
+    border-radius:20px;
+    background:#E5004A;
+    color:#fff;
+}
+.other{
+    padding-top:100px;
+}
+.other>ion-row>ion-col>div{
+width:100px;
+height:1px;
+border:1px solid #ddd;
+
+}
+.img{
+    margin:0 auto;
+    text-align:center;
+}
+.img>img{
+    width:40px;
+}
+}

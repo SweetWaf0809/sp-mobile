@@ -1,0 +1,96 @@
+<!--
+  Generated template for the OrderConfirmPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>确认订单</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-grid>
+  <ion-row>
+    <ion-col col-2>
+      <ion-icon name="pin"></ion-icon>
+    </ion-col>
+    <ion-col>
+      <p style="font-size:12px;">收货人：大神 <span style="padding-left:60px;">18811111111</span></p>
+      <p style="font-size:12px;">收货地址：北京市海淀区万寿路街道</p>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      母婴商品
+    </ion-col>
+  </ion-row>
+  <ion-row *ngFor="let tmp of list">
+    <ion-col col-3>
+      <img [src]="tmp.img_url" alt="">
+    </ion-col>
+    <ion-col>
+      <p>{{tmp.title}}</p>
+      <p>{{tmp.price+"x"+tmp.count}}
+          <button ion-button clear (click)="btnLeft()">-</button>
+          <span>{{tmp.count}}</span>
+          <button ion-button clear (click)="btnRight()">+</button>
+      </p>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<div style="height:6px;background:#f2f2f2;"></div>
+<ion-grid class="pay">
+  <ion-row>
+    <ion-col col-7>
+      支付金额<span>¥176</span><span>（免运费）</span>
+    </ion-col>
+    <ion-col col-5 text-right>
+      查看明细 ∨
+    </ion-col>
+    </ion-row>
+   <ion-row>
+     <ion-col>
+       支付方式
+     </ion-col>
+     <ion-col col-1 text-right>
+        ∧
+     </ion-col>
+   </ion-row>
+
+  <ion-row>
+      <ion-col>
+        支付宝
+      </ion-col>
+      <ion-col col-1 text-right>
+        <input type="radio" name="pay">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+          微信支付
+        </ion-col>
+        <ion-col col-1 text-right>
+            <input type="radio" name="pay">
+        </ion-col>
+      </ion-row>
+</ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-grid>
+    <ion-row class="footer">
+      <ion-col>
+        总计：<span>￥176</span>
+      </ion-col>
+      <ion-col col-6 text-right>
+        <button ion-button clear style="background:#E5004A;color:#fff;height:30px;">提交订单</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

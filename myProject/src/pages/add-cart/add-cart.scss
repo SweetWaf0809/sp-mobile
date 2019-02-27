@@ -1,0 +1,56 @@
+//弹出购物车
+.addcart{
+    height:160px;
+}
+.addcart>ion-row:first-child{
+    border-bottom:1px solid #999;
+}
+.addcart>ion-row:first-child>ion-col:first-child>img{
+    width:100px;
+    height:100px;
+}
+
+.addcart>ion-row:first-child>ion-col:nth-child(2)>p:first-child{
+  font-size:12px;
+  color:#666;
+}
+.addcart>ion-row:first-child>ion-col:nth-child(2)>p:nth-child(2){
+    font-size:14px;
+    color:#E5004A;
+    padding-top:4px;
+  }
+  .addcart>ion-row:first-child>ion-col:nth-child(2)>p:nth-child(3){
+    font-size:12px;
+    color:#666;
+    padding-top:4px;
+  }
+  .addcart>ion-row:first-child>ion-col:nth-child(2)>p:nth-child(3)>span{
+    font-size:12px;
+    color:#E5004A;
+    padding-top:4px;
+  }
+.addcart>ion-row:first-child>ion-col:nth-child(3)>button{
+color:#ddd;
+}
+.addcart>ion-row:nth-child(2)>ion-col:first-child{
+    color:#666;
+    font-size:12px;
+}
+.addcart>ion-row:nth-child(2)>ion-col:first-child>span{
+    color:#999;
+}
+.addcart>ion-row:nth-child(2)>ion-col:nth-child(2)>button{
+   width:20px;
+   height:20px;
+   background:#ddd;
+}
+.addcart>ion-row:nth-child(2)>ion-col:nth-child(2)>button:nth-child(2){
+    width:24px;
+ }
+ion-footer>.pop>button{
+    width:100%;
+    height:40px;
+    color:#fff;
+    font-size:16px;
+    background-color:#E5004A;
+}

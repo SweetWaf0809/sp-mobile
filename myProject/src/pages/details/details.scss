@@ -1,0 +1,58 @@
+page-details{*{
+    margin:0;
+    padding:0;
+}
+#spec>ion-row:first-child>ion-col{
+font-size:14px;
+color:#333;
+}
+ion-row:nth-child(2)>ion-col:first-child{
+    font-size:16px;
+    color:#E5004A;
+}
+ion-row:nth-child(2)>ion-col:nth-child(2){
+    font-size:14px;
+    color:#333;
+    text-decoration: line-through;
+}
+ion-row:nth-child(2)>ion-col:last-child>div{
+    width:60px;
+    height:20px;
+    border:1px solid orange;
+}
+ion-row:nth-child(2)>ion-col:last-child{
+    font-size:12px;
+    color:orange;
+}
+ion-row:nth-child(3)>ion-col{
+    font-size:12px;
+    color:#666;
+}
+ion-row:last-child>ion-col:first-child>img{
+   width:20px;
+   height:20px;
+}
+/*选择  数量 */
+ion-row:last-child>ion-col:nth-child(2){
+ font-size:12px;
+ color:#666;
+ }
+
+ ion-row:last-child>ion-col:nth-child(3){
+    font-size:12px;
+    color:#666;
+    }
+.opt>ion-row>ion-col:first-child{
+color:#666;
+}
+.opt>ion-row>ion-col:first-child>span{
+color:#000;
+}
+.opt>ion-row>ion-col:nth-child(2)>img{
+    width:12px;
+    height:12px;
+    }
+/**弹出购物车*/
+
+//  页脚
+}

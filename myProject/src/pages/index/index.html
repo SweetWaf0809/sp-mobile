@@ -1,0 +1,63 @@
+<!--
+  Generated template for the IndexPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content padding>
+  <ion-input type="text" class="put" style="border:0;background:#f2f2f2;width:100%;height:36px;border-radius:6px;text-indent:20px;" placeholder="搜索商品/品牌"></ion-input>
+  
+<!---轮播图-->
+<ion-slides *ngIf="myData" autoplay=2000 loop pager style="height:160px">
+  <ion-slide *ngFor="let tmp of myData">
+    <img [src]="tmp.img_url" alt="" style="height:150px">
+  </ion-slide>
+</ion-slides>
+<!---分隔块-->
+<div style="width:100%;height:10px;background:#f3f3f3">
+</div>
+<!--整点抢购-->
+<div style="line-height:26px; width:100%;height:26px;border-top:1px solid #ddd;border-bottom:1px solid #ddd;color:#E5004A;font-size:14px;">
+  整点抢购
+</div>
+<ion-scroll scrollX style="height:180px;white-space:nowrap;">
+  <ion-card *ngFor="let tmp of list" style="padding:0;display:inline-block;width:140px;box-shadow:none;margin:0;" (click)="jumpDetail(tmp.id)">
+    <ion-card-content style="padding:0" text-center>
+      <img [src]="tmp.img_url" alt="" style="height:100px;width:100px;margin:0 auto;">
+      <p style="color:#E5004A">{{tmp.new_price | currency:"CNY"}}</p>
+      <p style="text-decoration:line-through;color:#666;font-size:12px;">{{tmp.ori_price |currency:"CNY"}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-scroll>
+<!---分隔块-->
+<div style="width:100%;height:10px;background:#f3f3f3">
+</div>
+<!--热卖专区-->
+
+<!-- <div style="line-height:26px; width:100%;height:26px;border-top:1px solid #ddd;border-bottom:1px solid #ddd;color:#666;font-size:14px;">
+  热卖专区
+  <p style="display:inline;" >更多 ></p>
+
+</div> -->
+<ion-grid>
+  <ion-row>
+    <ion-col style="color:#666;">热卖专区</ion-col>
+    <ion-col col-2 style="color:#666;" (click)="jump()">更多 ></ion-col>
+  </ion-row>
+</ion-grid>
+<div style="width:100%;display:flex;">
+  <img src="../../assets/picture/sma_aozhou.jpg" alt="" style="width:50%;height:25%;">
+  <img src="../../assets/picture/sma_hangzhou.jpg" alt="" style="width:50%;height:25%;">
+</div>
+<!---分隔块-->
+<div style="width:100%;height:10px;background:#f3f3f3">
+</div>
+<!---限时特卖-->
+<ion-grid>
+  <ion-row>
+    <ion-col style="color:#666;">限时特卖</ion-col>
+    <ion-col col-2 style="color:#666;" (click)="jump()">更多 ></ion-col>
+  </ion-row>
+</ion-grid>
+<img src="../../assets/picture/1545025673484.jpg" alt="" >
+</ion-content>

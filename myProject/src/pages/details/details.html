@@ -1,0 +1,123 @@
+<!--
+  Generated template for the DetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>商品详情</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<!--轮播图-->
+<ion-slides autoplay=5000 loop pager style="height:150px">
+  <ion-slide>
+ <img src="{{details.img_url}}" alt="">
+  </ion-slide>
+</ion-slides>
+
+<ion-grid id="spec">
+  <ion-row>
+    <ion-col>{{details.title}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3>￥{{details.price}}</ion-col>
+    <ion-col col-2>￥{{details.ori_price}}</ion-col>
+    <ion-col><div text-center>2件起售</div></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-5><span>重量0.8kg</span></ion-col>
+    <ion-col> <span>满99包邮(同一仓库)</span></ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-1 align-self-center>
+      <img src="../../assets/picture/1451966807415.jpg" alt="">
+    </ion-col>
+    <ion-col col-8>荷兰直供 速普保税仓发货<br>
+    预计正常3-5个工作日...
+    </ion-col>
+    <ion-col col-3>
+      税率：11.2%
+    </ion-col>
+  </ion-row>
+</ion-grid>
+ <!---分隔块-->
+<div style="width:100%;height:10px;background:#f3f3f3">
+</div> 
+<!--选择-->
+<ion-grid class="opt">
+  <ion-row>
+    <ion-col col-11 (click)="jump()"><span>选择：</span>"数量2"</ion-col>
+    <ion-col col-1 align-self-center><img src="../../assets/picture/hover-next.png" alt=""></ion-col>
+  </ion-row>
+</ion-grid>
+
+ <!---分隔块-->
+ <div style="width:100%;height:10px;background:#f3f3f3">
+</div> 
+<!--商品评价-->
+<ion-grid class="opt">
+  <ion-row>
+    <ion-col col-11><span>商品评价</span>(100%好评,39人)</ion-col>
+    <ion-col col-1 (click)="jump()" align-self-center><img src="../../assets/picture/hover-next.png" alt=""></ion-col>
+  </ion-row>
+</ion-grid>
+ <!---分隔块-->
+ <div style="width:100%;height:10px;background:#f3f3f3">
+</div>
+<!--图片介绍-->
+<img src="../../assets/picture/1539672598995276.jpg" alt="">
+<img src="../../assets/picture/1539672599423897.jpg" alt="">
+<img src="../../assets/picture/1510729060901128.jpg" alt="">
+<img src="../../assets/picture/1510729060819000.jpg" alt="">
+<img src="../../assets/picture/1510729060503124.jpg" alt="">
+<img src="../../assets/picture/1510729061721003.jpg" alt="">
+<img src="../../assets/picture/1510729062871198.jpg" alt="">
+<img src="../../assets/picture/1510729063873908.jpg" alt="">
+<img src="../../assets/picture/1510729063860286.jpg" alt="">
+<img src="../../assets/picture/1510729064598248.jpg" alt="">
+<img src="../../assets/picture/1510729064164214.jpg" alt="">
+<img src="../../assets/picture/1510729065100110.jpg" alt="">
+<img src="../../assets/picture/1510729065535555.jpg" alt="">
+<img src="../../assets/picture/1510729066651842.jpg" alt="">
+<img src="../../assets/picture/1510729066983790.jpg" alt="">
+<img src="../../assets/picture/1510729066822894.jpg" alt="">
+<img src="../../assets/picture/1510729067555744.jpg" alt="">
+<img src="../../assets/picture/1510729068195140.jpg" alt="">
+<img src="../../assets/picture/1535610833934518.jpg" alt="">
+<img src="../../assets/picture/1544421683466708.jpg" alt="">
+</ion-content>
+
+
+<!--通过栅格系统实现页脚-->
+<ion-footer style="height:70px;border-top:1px solid #bbb;">
+<ion-grid>
+    <ion-row>
+      <ion-col col-2>
+        <button ion-button clear [navPush]="notFound" style="color:#666;">
+        <ion-icon name="ribbon"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col col-2>
+          <button ion-button clear [navPush]="cart" style="color:#666;">
+          <ion-icon name="cart"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-2>
+            <button ion-button clear [navPush]="notFound" style="color:#666;">
+            <ion-icon name="heart"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-6>
+              <button ion-button clear style="color:#fff;background:#E5004A" block (click)="addToCart()">
+                加入购物车
+              </button>
+            </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
